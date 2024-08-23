@@ -1,0 +1,3 @@
+When writing to a CSV file, the `csv.writer` or `csv.DictWriter` objects automatically add a newline character after each row. Additionally, the `open` function in write mode (`'w'`) also adds a newline character by default. This results in double newlines, creating the blank lines you see.
+
+To fix this, you should specify the `newline=''` parameter when opening the file for writing. This prevents the `open` function from adding its own newline, so only the `csv` module's newline is added. Here's the corrected code:
